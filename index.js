@@ -27,7 +27,7 @@ const questions = [
             //usage information
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use'
+            message: 'Provide instructions and examples for using your project'
         },
         {
             //contribution guidelines
@@ -66,7 +66,9 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(`generatedREADME.md`, data, (err) => {
+        err ? console.error(err) : console.log(`README created for ${fileName}!`)
+    })
 }
 
 // TODO: Create a function to initialize app
@@ -74,6 +76,8 @@ function init() {
     inquirer.prompt(questions)
     .then(function(data) {
         console.log(data);
+        let mdContent  = generateMarkdown(data);
+        writeToFile(data.title, mdContent);
     })
 }
 
