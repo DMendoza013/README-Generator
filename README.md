@@ -10,7 +10,7 @@ This project uses the inquirer package. Make sure to use npm i inquirer@8.2.4 to
   
 ## Usage 
 
-Follow the steps in this video to generate a new README file: <video controls src="README_generator_walkthrough .mp4" title="Title"></video>
+Follow the steps in this video to generate a new README file: https://github.com/DMendoza013/README-Generator/assets/160792363/6d177489-6ace-4c08-991c-604ed0252877
 
 ## Credits
 
